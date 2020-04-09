@@ -1,30 +1,22 @@
 import React from 'react';
+//import getYouTubeVideos from '/components/App.js';
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> d10283e5cf303ebf13d13585dc6209989f909948
 class Search extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      value: ''
-    };
   }
-
-  handleInputChange(e) {
-    this.props.getYouTubeVideos(e.target.value);
-    this.setState({
-      value: e.target.value
-    });
-  }
-
   render() {
     return (
       <div className="search-bar form-inline">
         <input
           className="form-control"
           type="text"
-          value={this.state.value}
-          onChange={this.handleInputChange.bind(this)}
+          onChange={(e) => this.props.handleSearchInputChange(e.target.value)}
         />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
